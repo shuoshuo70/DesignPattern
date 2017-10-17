@@ -1,0 +1,12 @@
+代理模式：
+两个对象之间难以连接或者访问，通过中间的一个代理对象来访问。
+比如Boy追求Girl，通过Proxy来实现。Girl只知道Proxy的存在，Boy是通过Proxy来创建，并且Boy要知道Girl，
+不然怎么追求呢
+
+模板：
+1. 接口SendGift
+2. Boy和Proxy都实现这个接口，来给Girl送礼物，不同的是Boy是真正的来实现接口里的方法，
+   而Proxy只是调用Boy对象里的方法，并不是自己来实现
+3. Boy类里要引用Girl对象，即知道要连接的目标
+   Proxy类里要引用Boy，即知道替谁办事，替办的人呢不能被Girl知道，所以在Proxy内部来创建Boy，Proxy要
+   知道Girl才能办事，也就是在Proxy内部创建Boy时，把Girl和Boy连接建立起来
