@@ -1,5 +1,5 @@
 单例模式：
-对象定义成private  static
+对象定义成private static  private是因为阻止外部直接调用，static是为了保证只有一个实例
 构造方法private 这样阻止外部通过new 创建对象
 只提供一个public static的方法来获取对象 方法是static是因为不能通过new来创建实例，只能通过类名.静态
 方法的方式访问，所以提供的方法一定要是static的才行
