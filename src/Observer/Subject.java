@@ -1,5 +1,6 @@
 package Observer;
 
+import java.beans.EventHandler;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,3 +25,4 @@ public class Subject {
         }
     }
 }
+
