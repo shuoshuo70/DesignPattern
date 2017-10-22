@@ -1,0 +1,10 @@
+适配器模式
+将一个类的接口转换成客户希望的另外一个接口，简单的说，就是需要的东西就在面前，却不能使用，而短时间
+内有无法改造它，于是就想办法适配它。
+适配器的做法就是定义一个现有类可以用的类来当做适配器，在这个适配器内部调用不能连接的方法。
+
+本例中，Player作为球员的基类，Centers, Forwards, Guards分别继承它，这时出现一个ForeignCenter,它和
+前面介绍的几个类都没有关系，但是呢，我们仍然想用Player类去作为基类调用它，那就只好用适配器模式，新
+建一个适配器类叫Translator，它继承Player，写法与Centers, Forwards, Guards相似，不同的是Translator
+的构造方法中要去创建ForeignCenter对象，在Translator的方法中调用ForeignCenter对象的方法。
+在客户端中，不用知道适配器是谁，而是要知道适配器是来适配谁。
