@@ -4,7 +4,7 @@ package Singleton;
  * Created by shuoshu on 2017/10/19.
  */
 public class SingletonLock {
-    private static SingletonLock singleton = null;
+    private static volatile SingletonLock singleton = null;
     private static final Object syncRoot = new Object();
 
     private SingletonLock() {
